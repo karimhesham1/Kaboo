@@ -14,6 +14,7 @@ class Deck {
         }
       }
     }
+
   
     shuffleDeck() {
       let currentIndex = this.cards.length;
