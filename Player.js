@@ -2,6 +2,12 @@ class Player {
     constructor(name) {
       this.name = name;
       this.cards = [];
+      this.currentvalue = 0;
+    }
+
+    drawCard()
+    {
+      this.cards.push(Deck.drawCard());
     }
   
     addCard(card) {
