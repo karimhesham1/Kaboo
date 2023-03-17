@@ -33,69 +33,9 @@ class Kaboo {
       return card;
     }
   
-    resolveCardEffect(card) { //lesa abyad
-
-      const currentPlayer = this.getCurrentPlayer();
-    switch (card.value) {
-      case 7:
-      case 8: {
-        const cardIndex = currentPlayer.selectCardIndex();
-        if (cardIndex !== -1) {
-          const selectedCard = currentPlayer.cards[cardIndex];
-          currentPlayer.showCard(selectedCard);
-        }
-        break;
-      }
-      case 9:
-      case 10: {
-        const targetPlayer = this.players[currentPlayer.selectPlayerIndex(this.players)];
-        const cardIndex = targetPlayer.selectCardIndex();
-        if (cardIndex !== -1) {
-          const selectedCard = targetPlayer.cards[cardIndex];
-          currentPlayer.showCard(selectedCard);
-        }
-        break;
-      }
-      case 'Jack': {
-        const targetIndex1 = currentPlayer.selectCardIndex();
-        const targetIndex2 = currentPlayer.selectCardIndex();
-        if (targetIndex1 !== -1 && targetIndex2 !== -1) {
-          const tempCard = currentPlayer.cards[targetIndex1];
-          currentPlayer.cards[targetIndex1] = currentPlayer.cards[targetIndex2];
-          currentPlayer.cards[targetIndex2] = tempCard;
-        }
-        break;
-      }
-      case 'Queen': {
-        const targetIndex = currentPlayer.selectCardIndex();
-        if (targetIndex !== -1) {
-          const targetCard = currentPlayer.cards[targetIndex];
-          const ownIndex = currentPlayer.selectCardIndex();
-          if (ownIndex !== -1) {
-            const tempCard = currentPlayer.cards[ownIndex];
-            currentPlayer.cards[ownIndex] = targetCard;
-            currentPlayer.showCard(tempCard);
-          }
-        }
-        break;
-      }
-      case 'King': {
-        const targetIndex1 = currentPlayer.selectCardIndex();
-        const targetIndex2 = currentPlayer.selectCardIndex();
-        if (targetIndex1 !== -1 && targetIndex2 !== -1) {
-          const targetCard1 = currentPlayer.cards[targetIndex1];
-          const targetCard2 = currentPlayer.cards[targetIndex2];
-          const shouldSwap = currentPlayer.confirmAction(`Do you want to swap ${targetCard1.toString()} and ${targetCard2.toString()}?`);
-          if (shouldSwap) {
-            currentPlayer.cards[targetIndex1] = targetCard2;
-            currentPlayer.cards[targetIndex2] = targetCard1;
-          }
-        }
-        break;
-      }
-      default:
-        break;
-    }
+    resolveCardEffect(card) {
+        
+      // Implement card effect logic
     }
   
     kaboo() {
