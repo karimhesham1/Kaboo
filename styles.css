@@ -4,9 +4,32 @@
     justify-content: center;
   }
   
-  .row {
-    display: flex;
-    flex-direction: row;
+  .row1 {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .row2 {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+
+  .row3 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .row4 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
   }
   
   .card {
