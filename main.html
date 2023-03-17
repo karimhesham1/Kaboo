@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script src="Card.js"> </script>
-    test frontend branch
-</body>
+<html>
+  <head>
+    <title>Kaboo Game</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="card-container">
+        <img src="card1.png" id="card1">
+        <img src="card2.png" id="card2">
+        <img src="card3.png" id="card3">
+        <img src="card4.png" id="card4">
+      </div>
+      <div class="button-container">
+        <button id="play-card">Play Card</button>
+        <button id="call-kaboo">Call Kaboo</button>
+        <button id="counter-kaboo">Counter Kaboo</button>
+      </div>
+    </div>
+    <script src="game.js"></script>
+  </body>
 </html>
