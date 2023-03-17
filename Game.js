@@ -229,18 +229,24 @@ class Kaboo {
         this.discardPile = currentcard;
         console.log('discard card button clicked');
         console.log(this.discardPile);
+        console.log(this.deck);
         this.nextPlayer();
+        return;
       });
+      
       
   
       // Implement game logic here, including swapping and discarding cards, and applying card effects
   
       this.nextPlayer();
     }
+
+
   }
-  
+
   const game = new Kaboo();
- // while (!game.isGameOver()) {
-    game.playRound();
- // }
+  game.playRound();
+  
+  
+  
   
