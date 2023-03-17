@@ -1,4 +1,4 @@
-class Player {
+   class Player {
     constructor(name) {
       this.name = name;
       this.cards = [];
