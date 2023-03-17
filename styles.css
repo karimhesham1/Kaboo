@@ -1,0 +1,78 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  /* Game board styles */
+  #game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .game-card {
+    width: 80px;
+    height: 120px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .game-card:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .game-card.active {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .game-card.matched {
+    visibility: hidden;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    #game-board {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .game-card {
+      width: 60px;
+      height: 90px;
+      font-size: 18px;
+    }
+  }
+  
